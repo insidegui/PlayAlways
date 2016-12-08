@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD7A4F181DF9FBB80015054B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F171DF9FBB80015054B /* AppDelegate.swift */; };
+		DD7A4F1C1DF9FBB80015054B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */; };
+		DD7A4F2B1DF9FC280015054B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F2A1DF9FC280015054B /* AppRouter.swift */; };
+		DD7A4F2F1DF9FCED0015054B /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F2E1DF9FCED0015054B /* StatusItemController.swift */; };
+		DD7A4F311DF9FEF70015054B /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7A4F301DF9FEF70015054B /* Application.xib */; };
+		DD7A4F3B1DF9FF7C0015054B /* PACore.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7A4F391DF9FF7C0015054B /* PACore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7A4F3E1DF9FF7C0015054B /* PACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A4F371DF9FF7C0015054B /* PACore.framework */; };
+		DD7A4F3F1DF9FF7C0015054B /* PACore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A4F371DF9FF7C0015054B /* PACore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DD7A4F481DF9FFA40015054B /* PlayAlways.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F471DF9FFA40015054B /* PlayAlways.swift */; };
+		DD7A4F4B1DFA005F0015054B /* PlaygroundMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F4A1DFA005F0015054B /* PlaygroundMaker.swift */; };
+		DD7A4F4D1DFA01020015054B /* PlayAlwaysMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F4C1DFA01020015054B /* PlayAlwaysMaker.swift */; };
+		DD7A4F4F1DFA01760015054B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F4E1DFA01760015054B /* MainWindowController.swift */; };
+		DD7A4F511DFA017C0015054B /* PlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F501DFA017C0015054B /* PlaygroundViewController.swift */; };
+		DD7A4F541DFA02670015054B /* FinderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F531DFA02670015054B /* FinderHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD7A4F3C1DF9FF7C0015054B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD7A4F0C1DF9FBB80015054B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD7A4F361DF9FF7C0015054B;
+			remoteInfo = PACore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD7A4F431DF9FF7C0015054B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD7A4F3F1DF9FF7C0015054B /* PACore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD7A4F141DF9FBB80015054B /* PlayAways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAways.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7A4F171DF9FBB80015054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD7A4F201DF9FBB80015054B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7A4F2A1DF9FC280015054B /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		DD7A4F2E1DF9FCED0015054B /* StatusItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		DD7A4F301DF9FEF70015054B /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		DD7A4F371DF9FF7C0015054B /* PACore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PACore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7A4F391DF9FF7C0015054B /* PACore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PACore.h; sourceTree = "<group>"; };
+		DD7A4F3A1DF9FF7C0015054B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7A4F471DF9FFA40015054B /* PlayAlways.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayAlways.swift; sourceTree = "<group>"; };
+		DD7A4F4A1DFA005F0015054B /* PlaygroundMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundMaker.swift; sourceTree = "<group>"; };
+		DD7A4F4C1DFA01020015054B /* PlayAlwaysMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayAlwaysMaker.swift; sourceTree = "<group>"; };
+		DD7A4F4E1DFA01760015054B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		DD7A4F501DFA017C0015054B /* PlaygroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundViewController.swift; sourceTree = "<group>"; };
+		DD7A4F531DFA02670015054B /* FinderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD7A4F111DF9FBB80015054B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7A4F3E1DF9FF7C0015054B /* PACore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7A4F331DF9FF7C0015054B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD7A4F0B1DF9FBB80015054B = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F161DF9FBB80015054B /* PlayAways */,
+				DD7A4F381DF9FF7C0015054B /* PACore */,
+				DD7A4F151DF9FBB80015054B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD7A4F151DF9FBB80015054B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F141DF9FBB80015054B /* PlayAways.app */,
+				DD7A4F371DF9FF7C0015054B /* PACore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD7A4F161DF9FBB80015054B /* PlayAways */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F491DFA004D0015054B /* Playground Creation */,
+				DD7A4F291DF9FC0F0015054B /* Resources */,
+				DD7A4F281DF9FBF90015054B /* Controllers */,
+				DD7A4F271DF9FBEE0015054B /* Bootstrap */,
+			);
+			path = PlayAways;
+			sourceTree = "<group>";
+		};
+		DD7A4F271DF9FBEE0015054B /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F171DF9FBB80015054B /* AppDelegate.swift */,
+				DD7A4F2A1DF9FC280015054B /* AppRouter.swift */,
+			);
+			name = Bootstrap;
+			sourceTree = "<group>";
+		};
+		DD7A4F281DF9FBF90015054B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F4E1DFA01760015054B /* MainWindowController.swift */,
+				DD7A4F501DFA017C0015054B /* PlaygroundViewController.swift */,
+				DD7A4F2E1DF9FCED0015054B /* StatusItemController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DD7A4F291DF9FC0F0015054B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */,
+				DD7A4F201DF9FBB80015054B /* Info.plist */,
+				DD7A4F301DF9FEF70015054B /* Application.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DD7A4F381DF9FF7C0015054B /* PACore */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F441DF9FF810015054B /* Source */,
+				DD7A4F391DF9FF7C0015054B /* PACore.h */,
+				DD7A4F3A1DF9FF7C0015054B /* Info.plist */,
+			);
+			path = PACore;
+			sourceTree = "<group>";
+		};
+		DD7A4F441DF9FF810015054B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F471DF9FFA40015054B /* PlayAlways.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DD7A4F491DFA004D0015054B /* Playground Creation */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F521DFA02580015054B /* Helpers */,
+				DD7A4F4A1DFA005F0015054B /* PlaygroundMaker.swift */,
+				DD7A4F4C1DFA01020015054B /* PlayAlwaysMaker.swift */,
+			);
+			name = "Playground Creation";
+			sourceTree = "<group>";
+		};
+		DD7A4F521DFA02580015054B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DD7A4F531DFA02670015054B /* FinderHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD7A4F341DF9FF7C0015054B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7A4F3B1DF9FF7C0015054B /* PACore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD7A4F131DF9FBB80015054B /* PlayAways */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAways" */;
+			buildPhases = (
+				DD7A4F101DF9FBB80015054B /* Sources */,
+				DD7A4F111DF9FBB80015054B /* Frameworks */,
+				DD7A4F121DF9FBB80015054B /* Resources */,
+				DD7A4F431DF9FF7C0015054B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */,
+			);
+			name = PlayAways;
+			productName = PlayAways;
+			productReference = DD7A4F141DF9FBB80015054B /* PlayAways.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD7A4F361DF9FF7C0015054B /* PACore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7A4F401DF9FF7C0015054B /* Build configuration list for PBXNativeTarget "PACore" */;
+			buildPhases = (
+				DD7A4F321DF9FF7C0015054B /* Sources */,
+				DD7A4F331DF9FF7C0015054B /* Frameworks */,
+				DD7A4F341DF9FF7C0015054B /* Headers */,
+				DD7A4F351DF9FF7C0015054B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PACore;
+			productName = PACore;
+			productReference = DD7A4F371DF9FF7C0015054B /* PACore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD7A4F0C1DF9FBB80015054B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Guilherme Rambo";
+				TargetAttributes = {
+					DD7A4F131DF9FBB80015054B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8C7439RJLG;
+						ProvisioningStyle = Automatic;
+					};
+					DD7A4F361DF9FF7C0015054B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8C7439RJLG;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAways" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD7A4F0B1DF9FBB80015054B;
+			productRefGroup = DD7A4F151DF9FBB80015054B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD7A4F131DF9FBB80015054B /* PlayAways */,
+				DD7A4F361DF9FF7C0015054B /* PACore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD7A4F121DF9FBB80015054B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7A4F311DF9FEF70015054B /* Application.xib in Resources */,
+				DD7A4F1C1DF9FBB80015054B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7A4F351DF9FF7C0015054B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD7A4F101DF9FBB80015054B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7A4F181DF9FBB80015054B /* AppDelegate.swift in Sources */,
+				DD7A4F4B1DFA005F0015054B /* PlaygroundMaker.swift in Sources */,
+				DD7A4F4F1DFA01760015054B /* MainWindowController.swift in Sources */,
+				DD7A4F511DFA017C0015054B /* PlaygroundViewController.swift in Sources */,
+				DD7A4F2F1DF9FCED0015054B /* StatusItemController.swift in Sources */,
+				DD7A4F541DFA02670015054B /* FinderHelper.swift in Sources */,
+				DD7A4F4D1DFA01020015054B /* PlayAlwaysMaker.swift in Sources */,
+				DD7A4F2B1DF9FC280015054B /* AppRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7A4F321DF9FF7C0015054B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7A4F481DF9FFA40015054B /* PlayAlways.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD7A4F361DF9FF7C0015054B /* PACore */;
+			targetProxy = DD7A4F3C1DF9FF7C0015054B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DD7A4F211DF9FBB80015054B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD7A4F221DF9FBB80015054B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		DD7A4F241DF9FBB80015054B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = PlayAways/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DD7A4F251DF9FBB80015054B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = PlayAways/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DD7A4F411DF9FF7C0015054B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PACore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PACore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD7A4F421DF9FF7C0015054B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PACore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PACore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAways" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7A4F211DF9FBB80015054B /* Debug */,
+				DD7A4F221DF9FBB80015054B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAways" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7A4F241DF9FBB80015054B /* Debug */,
+				DD7A4F251DF9FBB80015054B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD7A4F401DF9FF7C0015054B /* Build configuration list for PBXNativeTarget "PACore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7A4F411DF9FF7C0015054B /* Debug */,
+				DD7A4F421DF9FF7C0015054B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD7A4F0C1DF9FBB80015054B /* Project object */;
+}
