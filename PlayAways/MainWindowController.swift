@@ -8,6 +8,7 @@
 
 import Cocoa
 
+/// Currently unused, will be used to show playground creation options in the future
 class MainWindowController: NSWindowController {
 
     init() {
