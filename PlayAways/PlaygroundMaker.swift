@@ -8,6 +8,12 @@
 
 import Foundation
 
+public enum PlaygroundPlatform: String {
+    case iOS
+    case macOS
+    case tvOS
+}
+
 protocol PlaygroundMaker {
-    func createPlayground(named name: String?, at destination: String, mac: Bool) throws
+    func createPlayground(named name: String?, at destination: String, platform: PlaygroundPlatform) throws
 }

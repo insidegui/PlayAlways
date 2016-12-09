@@ -16,21 +16,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         self.router = AppRouter(statusItemController: StatusItemController(), playgroundMaker: PlayAlwaysMaker())
     }
-
-    @IBAction func createNewEmbeddedPlayground(_ sender: Any?) {
-        router.createPlayground(mac: false)
-    }
     
-    @IBAction func createNewMacPlayground(_ sender: Any?) {
-        router.createPlayground(mac: true)
-    }
-    
-    @IBAction func createNewEmbeddedPlaygroundWithPanel(_ sender: Any?) {
-        router.createPlayground(mac: false, showOptions: true)
-    }
-    
-    @IBAction func createNewMacPlaygroundWithPanel(_ sender: Any?) {
-        router.createPlayground(mac: true, showOptions: true)
+    @IBAction func createNewPlayground(sender: NSMenuItem) {
+        guard let options = MenuOptions(rawValue: sender.tag) else {
+            NSLog("Unexpected menu option \(sender.tag), this should not happen")
+            return
+        }
+        
+        router.createPlayground(with: options)
     }
 }
 

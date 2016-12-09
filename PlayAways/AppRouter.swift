@@ -18,15 +18,33 @@ final class AppRouter {
         self.playgroundMaker = playgroundMaker
     }
     
-    func createPlayground(mac: Bool, showOptions: Bool = false) {
+    func createPlayground(with options: MenuOptions) {
+        let platform: PlaygroundPlatform
+        var showOptions = false
+        
+        switch options {
+        case .iOS:
+            platform = .iOS
+        case .iOSWithPanel:
+            platform = .iOS
+            showOptions = true
+        case .macOS:
+            platform = .macOS
+        case .macOSWithPanel:
+            platform = .macOS
+            showOptions = true
+        case .tvOS:
+            platform = .tvOS
+        case .tvOSWithPanel:
+            platform = .tvOS
+            showOptions = true
+        }
+        
         if showOptions {
             let panel = NSSavePanel()
-            
-            if mac {
-                panel.title = NSLocalizedString("New macOS Playground", comment: "New macOS Playground (panel title)")
-            } else {
-                panel.title = NSLocalizedString("New iOS Playground", comment: "New iOS Playground (panel title)")
-            }
+
+            let titleFormat = NSLocalizedString("New %@ Playground", comment: "New [platform name] Playground")
+            panel.title = String(format: titleFormat, platform.rawValue)
             
             panel.prompt = NSLocalizedString("Create", comment: "Create playground (button title)")
             
@@ -34,20 +52,20 @@ final class AppRouter {
             
             guard let url = panel.url else { return }
             
-            createPlayground(mac: mac, at: url)
+            createPlayground(for: platform, at: url)
         } else {
-            createPlayground(mac: mac, at: nil)
+            createPlayground(for: platform, at: nil)
         }
         
     }
     
-    private func createPlayground(mac: Bool, at location: URL?) {
+    private func createPlayground(for platform: PlaygroundPlatform, at location: URL?) {
         if let location = location {
             let directory = location.deletingLastPathComponent().path
             let name = location.deletingPathExtension().lastPathComponent
             
             do {
-                try playgroundMaker.createPlayground(named: name, at: directory, mac: mac)
+                try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
             } catch {
                 handle(error)
             }
@@ -60,7 +78,7 @@ final class AppRouter {
             let directory = FinderHelper.getFrontmostFinderWindowLocation(fallback: desktopDir)
             
             do {
-                try playgroundMaker.createPlayground(named: nil, at: directory, mac: mac)
+                try playgroundMaker.createPlayground(named: nil, at: directory, platform: platform)
             } catch {
                 handle(error)
             }

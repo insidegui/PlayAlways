@@ -24,7 +24,7 @@ public struct PlayAlways {
     public let platform: String
     
     public init(platform: String) {
-        self.platform = platform
+        self.platform = platform.lowercased()
     }
     
     var dateString: String {
