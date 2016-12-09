@@ -60,12 +60,14 @@ final class AppRouter {
     }
     
     private func createPlayground(for platform: PlaygroundPlatform, at location: URL?) {
+        var playgroundUrl: URL?
+        
         if let location = location {
             let directory = location.deletingLastPathComponent().path
             let name = location.deletingPathExtension().lastPathComponent
             
             do {
-                try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
+                playgroundUrl = try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
             } catch {
                 handle(error)
             }
@@ -78,10 +80,14 @@ final class AppRouter {
             let directory = FinderHelper.getFrontmostFinderWindowLocation(fallback: desktopDir)
             
             do {
-                try playgroundMaker.createPlayground(named: nil, at: directory, platform: platform)
+                playgroundUrl = try playgroundMaker.createPlayground(named: nil, at: directory, platform: platform)
             } catch {
                 handle(error)
             }
+        }
+        
+        if let url = playgroundUrl {
+            NSWorkspace.shared().open(url)
         }
     }
     

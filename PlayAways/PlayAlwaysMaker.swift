@@ -11,9 +11,9 @@ import PACore
 
 final class PlayAlwaysMaker: PlaygroundMaker {
     
-    func createPlayground(named name: String?, at destination: String, platform: PlaygroundPlatform) throws {
+    func createPlayground(named name: String?, at destination: String, platform: PlaygroundPlatform) throws -> URL {
         let maker = PlayAlways(platform: platform.rawValue)
-        try maker.createPlayground(fileName: name, atDestination: destination)
+        return try maker.createPlayground(fileName: name, atDestination: destination)
     }
     
 }

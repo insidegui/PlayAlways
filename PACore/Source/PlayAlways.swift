@@ -84,7 +84,7 @@ public struct PlayAlways {
         return false
     }
     
-    public func createPlayground(fileName: String? = nil, atDestination: String? = nil) throws {
+    public func createPlayground(fileName: String? = nil, atDestination: String? = nil) throws -> URL {
         
         // essencial Playground structure:
         // |- folder with name.playground
@@ -100,7 +100,7 @@ public struct PlayAlways {
             writeFile("contents.xcplayground", at: playgroundDir.path, content: contentHeader) &&
             writeFile("Contents.swift", at: playgroundDir.path, content: importHeader) {
             
-            return
+            return playgroundDir
         }
         
         throw PlaygroundError.creation

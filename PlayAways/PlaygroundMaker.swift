@@ -15,5 +15,5 @@ public enum PlaygroundPlatform: String {
 }
 
 protocol PlaygroundMaker {
-    func createPlayground(named name: String?, at destination: String, platform: PlaygroundPlatform) throws
+    func createPlayground(named name: String?, at destination: String, platform: PlaygroundPlatform) throws -> URL
 }
