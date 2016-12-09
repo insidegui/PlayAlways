@@ -100,12 +100,6 @@ public struct PlayAlways {
             writeFile("contents.xcplayground", at: playgroundDir.path, content: contentHeader) &&
             writeFile("Contents.swift", at: playgroundDir.path, content: importHeader) {
             
-            let task = Process()
-            task.launchPath = "/bin/sh"
-            task.arguments = ["-c", "open \(playgroundDir.path)"]
-            task.launch()
-            task.waitUntilExit()
-            
             return
         }
         
