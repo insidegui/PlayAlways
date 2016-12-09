@@ -52,6 +52,9 @@ final class StatusItemController {
         newTVItemAlternate.keyEquivalentModifierMask = [.command, .option]
         m.addItem(newTVItemAlternate)
         
+        let pathItem = NSMenuItem(title: NSLocalizedString("Set Location", comment: "Set Location"), action: #selector(AppDelegate.setPath(_:)), keyEquivalent: "l")
+        m.addItem(pathItem)
+        
         let quitItem = NSMenuItem(title: NSLocalizedString("Quit", comment: "Quit"), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         m.addItem(quitItem)
         

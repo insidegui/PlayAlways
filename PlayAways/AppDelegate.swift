@@ -25,5 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         router.createPlayground(with: options)
     }
+    
+    @IBAction func setPath(_ sender: NSMenuItem) { _ = FinderHelper.selectLocation() }
 }
 

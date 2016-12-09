@@ -77,7 +77,7 @@ final class AppRouter {
                 return
             }
             
-            let directory = FinderHelper.getFrontmostFinderWindowLocation(fallback: desktopDir)
+            let directory = FinderHelper.getLocation(fallback: desktopDir)
             
             do {
                 playgroundUrl = try playgroundMaker.createPlayground(named: nil, at: directory, platform: platform)

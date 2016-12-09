@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9893205A1DFB6085003A20A3 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989320591DFB6085003A20A3 /* PersistenceHelper.swift */; };
 		DD7A4F181DF9FBB80015054B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F171DF9FBB80015054B /* AppDelegate.swift */; };
 		DD7A4F1C1DF9FBB80015054B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */; };
 		DD7A4F2B1DF9FC280015054B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F2A1DF9FC280015054B /* AppRouter.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		989320591DFB6085003A20A3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		DD7A4F141DF9FBB80015054B /* PlayAways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7A4F171DF9FBB80015054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DD7A4F531DFA02670015054B /* FinderHelper.swift */,
+				989320591DFB6085003A20A3 /* PersistenceHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -242,7 +245,7 @@
 				TargetAttributes = {
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8C7439RJLG;
+						DevelopmentTeam = T99T2WGRY2;
 						ProvisioningStyle = Automatic;
 					};
 					DD7A4F361DF9FF7C0015054B = {
@@ -303,6 +306,7 @@
 				DD7A4F2F1DF9FCED0015054B /* StatusItemController.swift in Sources */,
 				DD7A4F541DFA02670015054B /* FinderHelper.swift in Sources */,
 				DD7A4F4D1DFA01020015054B /* PlayAlwaysMaker.swift in Sources */,
+				9893205A1DFB6085003A20A3 /* PersistenceHelper.swift in Sources */,
 				DD7A4F2B1DF9FC280015054B /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = T99T2WGRY2;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -440,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = T99T2WGRY2;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

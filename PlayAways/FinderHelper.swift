@@ -7,20 +7,48 @@
 //
 
 import Foundation
+import Cocoa
 
 final class FinderHelper {
     
-    class func getFrontmostFinderWindowLocation(fallback: String) -> String {
-        let cmd = "tell application \"Finder\"\ntry\nset dir to the target of the front window\nreturn POSIX path of (dir as text)\non error\nreturn \"/\"\nend try\nend tell"
-        let script = NSAppleScript(source: cmd)
+    static let path: String = "PlayPath"
+    
+    class func getLocation(fallback: String) -> String {
         
-        let results = script?.executeAndReturnError(nil)
+        guard let path: String = PersistenceHelper.read(key: FinderHelper.path) as? String else { return selectLocation(fallback: fallback) }
         
-        if let location = results?.stringValue, location != "/" {
-            return location
+        return path
+        
+    }
+    
+    class func selectLocation(fallback: String? = nil) -> String {
+        
+        let dialog: NSOpenPanel = NSOpenPanel()
+        
+        dialog.prompt = "Select"
+        dialog.worksWhenModal = true
+        dialog.allowsMultipleSelection = false
+        dialog.canChooseDirectories = true
+        dialog.canCreateDirectories = true
+        dialog.canChooseFiles = false
+        dialog.resolvesAliases = false
+        dialog.title = "Select a location"
+        dialog.message = "Select a location to create playgrounds into"
+        dialog.runModal()
+        
+        if let selected = dialog.url {
+            
+            PersistenceHelper.save(value: selected.absoluteString as AnyObject, key: FinderHelper.path)
+            
+            return selected.absoluteString
+        
         } else {
-            return fallback
+            
+            if let path: String = PersistenceHelper.read(key: FinderHelper.path) as? String { return path }
+            else { return fallback ?? "" }
+            
         }
+        
     }
     
 }
