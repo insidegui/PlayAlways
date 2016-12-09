@@ -21,10 +21,10 @@ public struct PlayAlways {
         }
     }
     
-    public let forMac: Bool
+    public let platform: String
     
-    public init(forMac: Bool) {
-        self.forMac = forMac
+    public init(platform: String) {
+        self.platform = platform
     }
     
     var dateString: String {
@@ -34,16 +34,23 @@ public struct PlayAlways {
         return dateFormat.string(from: date)
     }
     
+    var systemFramework: String {
+        switch platform {
+        case "macos": return "Cocoa"
+        default: return "UIKit"
+        }
+    }
+    
     var currentDir: String {
         return FileManager.default.currentDirectoryPath
     }
     
     var importHeader: String {
-        return "//: Playground - noun: a place where people can play\n\nimport \(forMac ? "Cocoa" : "UIKit")\n\nvar str = \"Hello, playground\""
+        return "//: Playground - noun: a place where people can play\n\nimport \(systemFramework)\n\nvar str = \"Hello, playground\""
     }
     
     var contentHeader: String {
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<playground version='5.0' target-platform='\(forMac ? "macos" : "ios")'>\n\t<timeline fileName='timeline.xctimeline'/>\n</playground>\n"
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<playground version='5.0' target-platform='\(platform)'>\n\t<timeline fileName='timeline.xctimeline'/>\n</playground>\n"
     }
     
     func createPlaygroundFolder(_ path: String)  -> Bool {
