@@ -8,6 +8,17 @@
 
 import Foundation
 
+public enum PAInvocationError: Error {
+    case invalidData
+    
+    public var localizedDescription: String {
+        switch self {
+        case .invalidData:
+            return NSLocalizedString("Unable to process selection data", comment: "Unable to process selection data (error message)")
+        }
+    }
+}
+
 public final class PAInvocation {
     
     public enum Platform: String {
@@ -46,7 +57,7 @@ public final class PAInvocation {
         }
     }
     
-    public class func invoke(with buffer: String, platform: Platform = .iOS) {
+    public class func invoke(with buffer: String, platform: Platform = .iOS) throws {
         let info = [
             Keys.buffer: buffer,
             Keys.platform: platform.rawValue.lowercased()
@@ -58,7 +69,7 @@ public final class PAInvocation {
                 DistributedNotificationCenter.default().post(name: Notifications.CreatePlayground, object: json, userInfo: nil)
             }
         } catch {
-            
+            throw PAInvocationError.invalidData
         }
     }
     
