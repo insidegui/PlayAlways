@@ -4,9 +4,9 @@ PlayAlways is a menubar app to quickly create new iOS or macOS playgrounds.
 
 [⬇️ LATEST RELEASE ⬇️](https://github.com/insidegui/PlayAlways/releases/latest)
 
-By default, the app creates the playgrounds on the location of the frontmost Finder window, if no Finder window is opened, the playground is created on the desktop.
+When you first create a playground, the app will ask where to save it. After you've set the path, that's where the playgrounds will be saved until you set a new one by choosing "Set Path".
 
-If you want to choose where to save the playground, you can hold down option when choosing the playground type and a save panel will appear allowing you to choose the location.
+If you want to choose where to save the playground, you can hold down option when choosing the playground type and a save panel will appear allowing you to choose the location for that specific playground.
 
 ![screenshot](./screenshot.png)
 
