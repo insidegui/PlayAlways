@@ -11,6 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    private var extensionHandler: ExtensionHandler!
     private var router: AppRouter!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -19,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             playgroundMaker: PlayAlwaysMaker(),
             persistence: PersistenceHelper(storage: UserDefaults.standard)
         )
+        
+        self.extensionHandler = ExtensionHandler(router: router)
     }
     
     @IBAction func createNewPlayground(sender: NSMenuItem) {

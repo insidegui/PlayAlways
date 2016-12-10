@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9893205A1DFB6085003A20A3 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989320591DFB6085003A20A3 /* PersistenceHelper.swift */; };
+		DD4F0B141DFC5BAC009C00DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */; };
+		DD4F0B191DFC5BAC009C00DB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */; };
+		DD4F0B1B1DFC5BAC009C00DB /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B1A1DFC5BAC009C00DB /* Commands.swift */; };
+		DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD4F0B251DFC5CA1009C00DB /* PAInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */; };
+		DD4F0B261DFC5E61009C00DB /* PACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A4F371DF9FF7C0015054B /* PACore.framework */; };
+		DD4F0B281DFC66AF009C00DB /* ExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */; };
 		DD7A4F181DF9FBB80015054B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F171DF9FBB80015054B /* AppDelegate.swift */; };
 		DD7A4F1C1DF9FBB80015054B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */; };
 		DD7A4F2B1DF9FC280015054B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A4F2A1DF9FC280015054B /* AppRouter.swift */; };
@@ -24,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD4F0B1D1DFC5BAC009C00DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD7A4F0C1DF9FBB80015054B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD4F0B101DFC5BAC009C00DB;
+			remoteInfo = PlayAwaysExtension;
+		};
 		DD7A4F3C1DF9FF7C0015054B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD7A4F0C1DF9FBB80015054B /* Project object */;
@@ -34,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DD4F0B231DFC5BAC009C00DB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD7A4F431DF9FF7C0015054B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +74,14 @@
 
 /* Begin PBXFileReference section */
 		989320591DFB6085003A20A3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlways.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DD4F0B171DFC5BAC009C00DB /* PlayAwaysExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayAwaysExtension.entitlements; sourceTree = "<group>"; };
+		DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		DD4F0B1A1DFC5BAC009C00DB /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		DD4F0B1C1DFC5BAC009C00DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAInvocation.swift; sourceTree = "<group>"; };
+		DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionHandler.swift; sourceTree = "<group>"; };
 		DD7A4F141DF9FBB80015054B /* PlayAways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7A4F171DF9FBB80015054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +100,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD4F0B0E1DFC5BAC009C00DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4F0B261DFC5E61009C00DB /* PACore.framework in Frameworks */,
+				DD4F0B141DFC5BAC009C00DB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD7A4F111DF9FBB80015054B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,11 +127,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4F0B121DFC5BAC009C00DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4F0B151DFC5BAC009C00DB /* PlayAwaysExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */,
+				DD4F0B1A1DFC5BAC009C00DB /* Commands.swift */,
+				DD4F0B1C1DFC5BAC009C00DB /* Info.plist */,
+				DD4F0B161DFC5BAC009C00DB /* Supporting Files */,
+			);
+			path = PlayAwaysExtension;
+			sourceTree = "<group>";
+		};
+		DD4F0B161DFC5BAC009C00DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0B171DFC5BAC009C00DB /* PlayAwaysExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DD7A4F0B1DF9FBB80015054B = {
 			isa = PBXGroup;
 			children = (
 				DD7A4F161DF9FBB80015054B /* PlayAways */,
 				DD7A4F381DF9FF7C0015054B /* PACore */,
+				DD4F0B151DFC5BAC009C00DB /* PlayAwaysExtension */,
+				DD4F0B121DFC5BAC009C00DB /* Frameworks */,
 				DD7A4F151DF9FBB80015054B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +170,7 @@
 			children = (
 				DD7A4F141DF9FBB80015054B /* PlayAways.app */,
 				DD7A4F371DF9FF7C0015054B /* PACore.framework */,
+				DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				DD7A4F471DF9FFA40015054B /* PlayAlways.swift */,
+				DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -174,6 +247,7 @@
 		DD7A4F521DFA02580015054B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */,
 				989320591DFB6085003A20A3 /* PersistenceHelper.swift */,
 			);
 			name = Helpers;
@@ -193,6 +267,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAwaysExtension" */;
+			buildPhases = (
+				DD4F0B0D1DFC5BAC009C00DB /* Sources */,
+				DD4F0B0E1DFC5BAC009C00DB /* Frameworks */,
+				DD4F0B0F1DFC5BAC009C00DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayAwaysExtension;
+			productName = PlayAwaysExtension;
+			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		DD7A4F131DF9FBB80015054B /* PlayAways */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAways" */;
@@ -201,11 +292,13 @@
 				DD7A4F111DF9FBB80015054B /* Frameworks */,
 				DD7A4F121DF9FBB80015054B /* Resources */,
 				DD7A4F431DF9FF7C0015054B /* Embed Frameworks */,
+				DD4F0B231DFC5BAC009C00DB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */,
+				DD4F0B1E1DFC5BAC009C00DB /* PBXTargetDependency */,
 			);
 			name = PlayAways;
 			productName = PlayAways;
@@ -240,6 +333,16 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Guilherme Rambo";
 				TargetAttributes = {
+					DD4F0B101DFC5BAC009C00DB = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8C7439RJLG;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8C7439RJLG;
@@ -268,11 +371,19 @@
 			targets = (
 				DD7A4F131DF9FBB80015054B /* PlayAways */,
 				DD7A4F361DF9FF7C0015054B /* PACore */,
+				DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD4F0B0F1DFC5BAC009C00DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD7A4F121DF9FBB80015054B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,10 +403,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD4F0B0D1DFC5BAC009C00DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4F0B191DFC5BAC009C00DB /* SourceEditorExtension.swift in Sources */,
+				DD4F0B1B1DFC5BAC009C00DB /* Commands.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD7A4F101DF9FBB80015054B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4F0B281DFC66AF009C00DB /* ExtensionHandler.swift in Sources */,
 				DD7A4F181DF9FBB80015054B /* AppDelegate.swift in Sources */,
 				DD7A4F4B1DFA005F0015054B /* PlaygroundMaker.swift in Sources */,
 				DD7A4F4F1DFA01760015054B /* MainWindowController.swift in Sources */,
@@ -311,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4F0B251DFC5CA1009C00DB /* PAInvocation.swift in Sources */,
 				DD7A4F481DF9FFA40015054B /* PlayAlways.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +440,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD4F0B1E1DFC5BAC009C00DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */;
+			targetProxy = DD4F0B1D1DFC5BAC009C00DB /* PBXContainerItemProxy */;
+		};
 		DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DD7A4F361DF9FF7C0015054B /* PACore */;
@@ -326,6 +453,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DD4F0B201DFC5BAC009C00DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways.PlayAwaysExtension;
+				PRODUCT_NAME = PlayAlways;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DD4F0B211DFC5BAC009C00DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways.PlayAwaysExtension;
+				PRODUCT_NAME = PlayAlways;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		DD7A4F211DF9FBB80015054B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +669,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAwaysExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F0B201DFC5BAC009C00DB /* Debug */,
+				DD4F0B211DFC5BAC009C00DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAways" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
