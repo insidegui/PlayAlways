@@ -14,7 +14,18 @@ final class Commander {
     
     class func perform(with invocation: XCSourceEditorCommandInvocation, for platform: PAInvocation.Platform) {
         do {
-            try PAInvocation.invoke(with: invocation.buffer.completeBuffer, platform: platform)
+            var text = ""
+            
+            invocation.buffer.selections.forEach { selection in
+                guard let range = selection as? XCSourceTextRange else { return }
+                
+                for l in range.start.line...range.end.line {
+                    guard let line = invocation.buffer.lines[l] as? String else { continue }
+                    text.append(line)
+                }
+            }
+            
+            try PAInvocation.invoke(with: text, platform: platform)
         } catch {
             NSAlert(error: error).runModal()
         }
