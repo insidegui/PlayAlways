@@ -66,7 +66,7 @@ public final class PAInvocation {
         do {
             let data = try JSONSerialization.data(withJSONObject: info, options: [])
             if let json = String(data: data, encoding: .utf8) {
-                DistributedNotificationCenter.default().post(name: Notifications.CreatePlayground, object: json, userInfo: nil)
+                DistributedNotificationCenter.default().postNotificationName(Notifications.CreatePlayground, object: json, userInfo: nil, deliverImmediately: true)
             }
         } catch {
             throw PAInvocationError.invalidData
