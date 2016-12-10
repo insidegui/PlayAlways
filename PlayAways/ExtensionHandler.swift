@@ -22,11 +22,11 @@ final class ExtensionHandler {
             
             switch platform {
             case "macos":
-                options = .macOSWithPanel
+                options = .macOS
             case "tvos":
-                options = .tvOSWithPanel
+                options = .tvOS
             default:
-                options = .iOSWithPanel
+                options = .iOS
             }
             
             self?.router?.createPlayground(with: options, contents: buffer)
