@@ -245,7 +245,7 @@
 				TargetAttributes = {
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = T99T2WGRY2;
+						DevelopmentTeam = 8C7439RJLG;
 						ProvisioningStyle = Automatic;
 					};
 					DD7A4F361DF9FF7C0015054B = {
@@ -427,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T99T2WGRY2;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -444,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T99T2WGRY2;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
