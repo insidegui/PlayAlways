@@ -12,10 +12,12 @@ final class AppRouter {
     
     private let statusItemController: StatusItemController
     private let playgroundMaker: PlaygroundMaker
+    private let persistence: PersistenceHelper
     
-    init(statusItemController: StatusItemController, playgroundMaker: PlaygroundMaker) {
+    init(statusItemController: StatusItemController, playgroundMaker: PlaygroundMaker, persistence: PersistenceHelper) {
         self.statusItemController = statusItemController
         self.playgroundMaker = playgroundMaker
+        self.persistence = persistence
     }
     
     func createPlayground(with options: MenuOptions) {
@@ -52,42 +54,68 @@ final class AppRouter {
             
             guard let url = panel.url else { return }
             
-            createPlayground(for: platform, at: url)
+            createPlayground(for: platform, at: url, usingDefaultName: false)
         } else {
-            createPlayground(for: platform, at: nil)
+            let url = storageLocationShowingPanelIfNeeded()
+            
+            createPlayground(for: platform, at: url, usingDefaultName: true)
         }
         
     }
     
-    private func createPlayground(for platform: PlaygroundPlatform, at location: URL?) {
+    private func createPlayground(for platform: PlaygroundPlatform, at location: URL?, usingDefaultName defaultName: Bool) {
         var playgroundUrl: URL?
         
-        if let location = location {
-            let directory = location.deletingLastPathComponent().path
-            let name = location.deletingPathExtension().lastPathComponent
-            
-            do {
-                playgroundUrl = try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
-            } catch {
-                handle(error)
-            }
+        guard let location = location else {
+            // cancelled
+            return
+        }
+        
+        let directory = defaultName ? location.path : location.deletingLastPathComponent().path
+        
+        let name: String?
+        
+        if defaultName {
+            name = nil
         } else {
-            guard let desktopDir = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, true).first else {
-                NSLog("NSSearchPathForDirectoriesInDomains returned nil for desktop dir, this should never happen!")
-                return
-            }
-            
-            let directory = FinderHelper.getLocation(fallback: desktopDir)
-            
-            do {
-                playgroundUrl = try playgroundMaker.createPlayground(named: nil, at: directory, platform: platform)
-            } catch {
-                handle(error)
-            }
+            name = location.deletingPathExtension().lastPathComponent
+        }
+        
+        do {
+            playgroundUrl = try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
+        } catch {
+            handle(error)
         }
         
         if let url = playgroundUrl {
             NSWorkspace.shared().open(url)
+        }
+    }
+    
+    func storageLocationShowingPanelIfNeeded(force: Bool = false) -> URL? {
+        if let path = persistence.storagePath, !force {
+            return URL(fileURLWithPath: path)
+        } else {
+            let url = runStorageLocationPanel()
+            persistence.storagePath = url?.path
+            
+            return url
+        }
+    }
+    
+    private func runStorageLocationPanel() -> URL? {
+        let panel = NSOpenPanel()
+        
+        panel.prompt = NSLocalizedString("Select", comment: "Select (open panel button to set storage location)")
+        panel.canChooseDirectories = true
+        panel.canCreateDirectories = true
+        panel.canChooseFiles = false
+        panel.title = NSLocalizedString("Select a location to create playgrounds into", comment: "Select a location to create playgrounds into")
+        
+        if panel.runModal() != NSFileHandlingPanelOKButton {
+            return nil
+        } else {
+            return panel.url
         }
     }
     
