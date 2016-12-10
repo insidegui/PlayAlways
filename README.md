@@ -10,4 +10,12 @@ If you want to choose where to save the playground, you can hold down option whe
 
 ![screenshot](./screenshot.png)
 
+### Xcode extension
+
+PlayAlways also includes an Xcode extension so you can quickly create playgrounds from the selected code. Playgrounds created from the extension are saved to the default path. Please note that the app must be running for the extension to work.
+
+![screenshot2](./screenshot2.png)
+
+### Acknowledgments
+
 Thanks [@dbonates](https://github.com/dbonates) for the the original idea 😃
