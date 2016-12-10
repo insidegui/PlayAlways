@@ -14,7 +14,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var router: AppRouter!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        self.router = AppRouter(statusItemController: StatusItemController(), playgroundMaker: PlayAlwaysMaker())
+        self.router = AppRouter(
+            statusItemController: StatusItemController(),
+            playgroundMaker: PlayAlwaysMaker(),
+            persistence: PersistenceHelper(storage: UserDefaults.standard)
+        )
     }
     
     @IBAction func createNewPlayground(sender: NSMenuItem) {
@@ -24,6 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         router.createPlayground(with: options)
+    }
+    
+    @IBAction func setPath(_ sender: NSMenuItem) {
+        _ = router.storageLocationShowingPanelIfNeeded(force: true)
     }
 }
 
