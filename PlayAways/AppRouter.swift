@@ -50,7 +50,10 @@ final class AppRouter {
             
             panel.prompt = NSLocalizedString("Create", comment: "Create playground (button title)")
             
-            panel.runModal()
+            guard panel.runModal() == NSFileHandlingPanelOKButton else {
+                // cancelled
+                return
+            }
             
             guard let url = panel.url else { return }
             
