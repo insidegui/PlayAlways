@@ -20,7 +20,7 @@ final class AppRouter {
         self.persistence = persistence
     }
     
-    func createPlayground(with options: MenuOptions) {
+    func createPlayground(with options: MenuOptions, contents: String = "") {
         let platform: PlaygroundPlatform
         var showOptions = false
         
@@ -57,16 +57,16 @@ final class AppRouter {
             
             guard let url = panel.url else { return }
             
-            createPlayground(for: platform, at: url, usingDefaultName: false)
+            createPlayground(for: platform, at: url, usingDefaultName: false, contents: contents)
         } else {
             let url = storageLocationShowingPanelIfNeeded()
             
-            createPlayground(for: platform, at: url, usingDefaultName: true)
+            createPlayground(for: platform, at: url, usingDefaultName: true, contents: contents)
         }
         
     }
     
-    private func createPlayground(for platform: PlaygroundPlatform, at location: URL?, usingDefaultName defaultName: Bool) {
+    private func createPlayground(for platform: PlaygroundPlatform, at location: URL?, usingDefaultName defaultName: Bool, contents: String) {
         var playgroundUrl: URL?
         
         guard let location = location else {
@@ -85,7 +85,7 @@ final class AppRouter {
         }
         
         do {
-            playgroundUrl = try playgroundMaker.createPlayground(named: name, at: directory, platform: platform)
+            playgroundUrl = try playgroundMaker.createPlayground(named: name, at: directory, platform: platform, contents: contents)
         } catch {
             handle(error)
         }

@@ -29,7 +29,7 @@ final class ExtensionHandler {
                 options = .iOSWithPanel
             }
             
-            self?.router?.createPlayground(with: options)
+            self?.router?.createPlayground(with: options, contents: buffer)
         }
     }
     

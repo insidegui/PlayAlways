@@ -22,9 +22,11 @@ public struct PlayAlways {
     }
     
     public let platform: String
+    public let contents: String
     
-    public init(platform: String) {
+    public init(platform: String, contents: String = "") {
         self.platform = platform.lowercased()
+        self.contents = contents
     }
     
     var dateString: String {
@@ -46,7 +48,11 @@ public struct PlayAlways {
     }
     
     var importHeader: String {
-        return "//: Playground - noun: a place where people can play\n\nimport \(systemFramework)\n\nvar str = \"Hello, playground\""
+        return "//: Playground - noun: a place where people can play\n\nimport \(systemFramework)\n\n"
+    }
+    
+    var effectiveContents: String {
+        return importHeader + (contents.isEmpty ? "var str = \"Hello, playground\"" : contents)
     }
     
     var contentHeader: String {
@@ -98,7 +104,7 @@ public struct PlayAlways {
         
         if createPlaygroundFolder(playgroundDir.path) &&
             writeFile("contents.xcplayground", at: playgroundDir.path, content: contentHeader) &&
-            writeFile("Contents.swift", at: playgroundDir.path, content: importHeader) {
+            writeFile("Contents.swift", at: playgroundDir.path, content: effectiveContents) {
             
             return playgroundDir
         }
