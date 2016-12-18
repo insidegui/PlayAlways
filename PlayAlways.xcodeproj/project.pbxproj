@@ -82,7 +82,7 @@
 		DD4F0B1C1DFC5BAC009C00DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAInvocation.swift; sourceTree = "<group>"; };
 		DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionHandler.swift; sourceTree = "<group>"; };
-		DD7A4F141DF9FBB80015054B /* PlayAways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAways.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7A4F141DF9FBB80015054B /* PlayAlways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayAlways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7A4F171DF9FBB80015054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7A4F1B1DF9FBB80015054B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD7A4F201DF9FBB80015054B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		DD7A4F0B1DF9FBB80015054B = {
 			isa = PBXGroup;
 			children = (
-				DD7A4F161DF9FBB80015054B /* PlayAways */,
+				DD7A4F161DF9FBB80015054B /* PlayAlways */,
 				DD7A4F381DF9FF7C0015054B /* PACore */,
 				DD4F0B151DFC5BAC009C00DB /* PlayAwaysExtension */,
 				DD4F0B121DFC5BAC009C00DB /* Frameworks */,
@@ -168,14 +168,14 @@
 		DD7A4F151DF9FBB80015054B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD7A4F141DF9FBB80015054B /* PlayAways.app */,
+				DD7A4F141DF9FBB80015054B /* PlayAlways.app */,
 				DD7A4F371DF9FF7C0015054B /* PACore.framework */,
 				DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD7A4F161DF9FBB80015054B /* PlayAways */ = {
+		DD7A4F161DF9FBB80015054B /* PlayAlways */ = {
 			isa = PBXGroup;
 			children = (
 				DD7A4F491DFA004D0015054B /* Playground Creation */,
@@ -183,6 +183,7 @@
 				DD7A4F281DF9FBF90015054B /* Controllers */,
 				DD7A4F271DF9FBEE0015054B /* Bootstrap */,
 			);
+			name = PlayAlways;
 			path = PlayAways;
 			sourceTree = "<group>";
 		};
@@ -267,9 +268,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */ = {
+		DD4F0B101DFC5BAC009C00DB /* PlayAlwaysExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAwaysExtension" */;
+			buildConfigurationList = DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAlwaysExtension" */;
 			buildPhases = (
 				DD4F0B0D1DFC5BAC009C00DB /* Sources */,
 				DD4F0B0E1DFC5BAC009C00DB /* Frameworks */,
@@ -279,14 +280,14 @@
 			);
 			dependencies = (
 			);
-			name = PlayAwaysExtension;
+			name = PlayAlwaysExtension;
 			productName = PlayAwaysExtension;
 			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
-		DD7A4F131DF9FBB80015054B /* PlayAways */ = {
+		DD7A4F131DF9FBB80015054B /* PlayAlways */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAways" */;
+			buildConfigurationList = DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAlways" */;
 			buildPhases = (
 				DD7A4F101DF9FBB80015054B /* Sources */,
 				DD7A4F111DF9FBB80015054B /* Frameworks */,
@@ -300,9 +301,9 @@
 				DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */,
 				DD4F0B1E1DFC5BAC009C00DB /* PBXTargetDependency */,
 			);
-			name = PlayAways;
+			name = PlayAlways;
 			productName = PlayAways;
-			productReference = DD7A4F141DF9FBB80015054B /* PlayAways.app */;
+			productReference = DD7A4F141DF9FBB80015054B /* PlayAlways.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DD7A4F361DF9FF7C0015054B /* PACore */ = {
@@ -330,12 +331,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Guilherme Rambo";
 				TargetAttributes = {
 					DD4F0B101DFC5BAC009C00DB = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8C7439RJLG;
+						DevelopmentTeam = 2379EAXEPK;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -345,7 +346,7 @@
 					};
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8C7439RJLG;
+						DevelopmentTeam = 2379EAXEPK;
 						ProvisioningStyle = Automatic;
 					};
 					DD7A4F361DF9FF7C0015054B = {
@@ -356,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAways" */;
+			buildConfigurationList = DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAlways" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -369,9 +370,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD7A4F131DF9FBB80015054B /* PlayAways */,
+				DD7A4F131DF9FBB80015054B /* PlayAlways */,
 				DD7A4F361DF9FF7C0015054B /* PACore */,
-				DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */,
+				DD4F0B101DFC5BAC009C00DB /* PlayAlwaysExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -442,7 +443,7 @@
 /* Begin PBXTargetDependency section */
 		DD4F0B1E1DFC5BAC009C00DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD4F0B101DFC5BAC009C00DB /* PlayAwaysExtension */;
+			target = DD4F0B101DFC5BAC009C00DB /* PlayAlwaysExtension */;
 			targetProxy = DD4F0B1D1DFC5BAC009C00DB /* PBXContainerItemProxy */;
 		};
 		DD7A4F3D1DF9FF7C0015054B /* PBXTargetDependency */ = {
@@ -459,11 +460,11 @@
 				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = 2379EAXEPK;
 				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways.PlayAwaysExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
 				PRODUCT_NAME = PlayAlways;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -476,11 +477,11 @@
 				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = 2379EAXEPK;
 				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways.PlayAwaysExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
 				PRODUCT_NAME = PlayAlways;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -505,6 +506,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -554,6 +556,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -584,11 +587,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = 2379EAXEPK;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -601,11 +604,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = 2379EAXEPK;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAways;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -669,7 +672,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAwaysExtension" */ = {
+		DD4F0B221DFC5BAC009C00DB /* Build configuration list for PBXNativeTarget "PlayAlwaysExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD4F0B201DFC5BAC009C00DB /* Debug */,
@@ -678,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAways" */ = {
+		DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAlways" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD7A4F211DF9FBB80015054B /* Debug */,
@@ -687,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAways" */ = {
+		DD7A4F231DF9FBB80015054B /* Build configuration list for PBXNativeTarget "PlayAlways" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD7A4F241DF9FBB80015054B /* Debug */,
