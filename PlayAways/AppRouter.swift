@@ -45,7 +45,7 @@ final class AppRouter {
         if showOptions {
             let panel = NSSavePanel()
 
-            let titleFormat = NSLocalizedString("New %@ Playground", comment: "New [platform name] Playground")
+            let titleFormat = NSLocalizedString("New Playground", comment: "New [platform name] Playground")
             panel.title = String(format: titleFormat, platform.rawValue)
             
             panel.prompt = NSLocalizedString("Create", comment: "Create playground (button title)")

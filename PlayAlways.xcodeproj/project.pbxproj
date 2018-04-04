@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0878392074E51E00E3993C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F08783B2074E51E00E3993C /* Localizable.strings */; };
+		1F08783D2074F4BE00E3993C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F08783B2074E51E00E3993C /* Localizable.strings */; };
 		9893205A1DFB6085003A20A3 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989320591DFB6085003A20A3 /* PersistenceHelper.swift */; };
 		DD4F0B141DFC5BAC009C00DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */; };
 		DD4F0B191DFC5BAC009C00DB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */; };
@@ -73,6 +75,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F08783A2074E51E00E3993C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1F08783C2074F09500E3993C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		989320591DFB6085003A20A3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlways.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -182,6 +186,7 @@
 				DD7A4F291DF9FC0F0015054B /* Resources */,
 				DD7A4F281DF9FBF90015054B /* Controllers */,
 				DD7A4F271DF9FBEE0015054B /* Bootstrap */,
+				1F08783B2074E51E00E3993C /* Localizable.strings */,
 			);
 			name = PlayAlways;
 			path = PlayAways;
@@ -364,6 +369,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = DD7A4F0B1DF9FBB80015054B;
 			productRefGroup = DD7A4F151DF9FBB80015054B /* Products */;
@@ -390,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7A4F311DF9FEF70015054B /* Application.xib in Resources */,
+				1F0878392074E51E00E3993C /* Localizable.strings in Resources */,
 				DD7A4F1C1DF9FBB80015054B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F08783D2074F4BE00E3993C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,18 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1F08783B2074E51E00E3993C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F08783A2074E51E00E3993C /* en */,
+				1F08783C2074F09500E3993C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		DD4F0B201DFC5BAC009C00DB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -492,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -542,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
