@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  PlayAlways
+
+  Created by Marcel Voß on 04.04.18.
+  Copyright © 2018 Guilherme Rambo. All rights reserved.
+*/
+
+"Quit" = "Beenden";
+"Set Path…" = "Pfad setzen…";
+
+"New iOS Playground…" = "Neuer iOS Playground…";
+"New macOS Playground…" = "Neuer macOS Playground…";
+"New tvOS Playground…" = "Neuer tvOS Playground…";
+
+"New iOS Playground" = "Neuer iOS Playground";
+"New macOS Playground" = "Neuer macOS Playground";
+"New tvOS Playground" = "Neuer tvOS Playground";
+
+"Create" = "Erstellen";
+"New Playground" = "Neuer %@ Playground";
+
+"Select" = "Auswählen";
+"Select a location to create playgrounds into" = "Wähle einen Ort, an welchem neue Playground abgelegt werden sollen";
+
+"Unable to create playground at the specified location" = "Fehler beim Erstellen eines Playgrounds an dem angegebenen Ort";
+"Unable to process selection data" = "Fehler beim Verarbeiten der ausgewählten Daten";
