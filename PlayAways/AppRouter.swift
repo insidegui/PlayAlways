@@ -50,7 +50,7 @@ final class AppRouter {
             
             panel.prompt = NSLocalizedString("Create", comment: "Create playground (button title)")
             
-            guard panel.runModal() == NSFileHandlingPanelOKButton else {
+            guard panel.runModal().rawValue == NSFileHandlingPanelOKButton else {
                 // cancelled
                 return
             }
@@ -91,7 +91,7 @@ final class AppRouter {
         }
         
         if let url = playgroundUrl {
-            NSWorkspace.shared().open(url)
+			NSWorkspace.shared.open(url)
         }
     }
     
@@ -115,7 +115,7 @@ final class AppRouter {
         panel.canChooseFiles = false
         panel.title = NSLocalizedString("Select a location to create playgrounds into", comment: "Select a location to create playgrounds into")
         
-        if panel.runModal() != NSFileHandlingPanelOKButton {
+        if panel.runModal().rawValue != NSFileHandlingPanelOKButton {
             return nil
         } else {
             return panel.url

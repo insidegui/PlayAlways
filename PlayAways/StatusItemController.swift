@@ -75,7 +75,7 @@ final class StatusItemController {
     private let statusItem: NSStatusItem
     
     init() {
-        statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+		statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusItem.menu = menu
         statusItem.image = #imageLiteral(resourceName: "PlayAlways")
         statusItem.highlightMode = true
