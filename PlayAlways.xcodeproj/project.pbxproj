@@ -342,6 +342,7 @@
 					DD4F0B101DFC5BAC009C00DB = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L5UZAT7KA9;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -352,22 +353,22 @@
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L5UZAT7KA9;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					DD7A4F361DF9FF7C0015054B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = L5UZAT7KA9;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAlways" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				de,
