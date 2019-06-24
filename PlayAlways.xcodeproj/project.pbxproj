@@ -13,7 +13,7 @@
 		DD4F0B141DFC5BAC009C00DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */; };
 		DD4F0B191DFC5BAC009C00DB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */; };
 		DD4F0B1B1DFC5BAC009C00DB /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B1A1DFC5BAC009C00DB /* Commands.swift */; };
-		DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD4F0B1F1DFC5BAC009C00DB /* PlayAlwaysExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DD4F0B251DFC5CA1009C00DB /* PAInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */; };
 		DD4F0B261DFC5E61009C00DB /* PACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A4F371DF9FF7C0015054B /* PACore.framework */; };
 		DD4F0B281DFC66AF009C00DB /* ExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */; };
@@ -56,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */,
+				DD4F0B1F1DFC5BAC009C00DB /* PlayAlwaysExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 		1F08783A2074E51E00E3993C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F08783C2074F09500E3993C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		989320591DFB6085003A20A3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
-		DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlways.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlwaysExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F0B171DFC5BAC009C00DB /* PlayAwaysExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayAwaysExtension.entitlements; sourceTree = "<group>"; };
 		DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			children = (
 				DD7A4F141DF9FBB80015054B /* PlayAlways.app */,
 				DD7A4F371DF9FF7C0015054B /* PACore.framework */,
-				DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */,
+				DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			);
 			name = PlayAlwaysExtension;
 			productName = PlayAwaysExtension;
-			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */;
+			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 		DD7A4F131DF9FBB80015054B /* PlayAlways */ = {
@@ -487,7 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
-				PRODUCT_NAME = PlayAlways;
+				PRODUCT_NAME = PlayAlwaysExtension;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -504,7 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
-				PRODUCT_NAME = PlayAlways;
+				PRODUCT_NAME = PlayAlwaysExtension;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
