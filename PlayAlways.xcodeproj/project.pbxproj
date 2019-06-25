@@ -13,7 +13,7 @@
 		DD4F0B141DFC5BAC009C00DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */; };
 		DD4F0B191DFC5BAC009C00DB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */; };
 		DD4F0B1B1DFC5BAC009C00DB /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B1A1DFC5BAC009C00DB /* Commands.swift */; };
-		DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD4F0B1F1DFC5BAC009C00DB /* PlayAlwaysExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DD4F0B251DFC5CA1009C00DB /* PAInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B241DFC5CA1009C00DB /* PAInvocation.swift */; };
 		DD4F0B261DFC5E61009C00DB /* PACore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A4F371DF9FF7C0015054B /* PACore.framework */; };
 		DD4F0B281DFC66AF009C00DB /* ExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0B271DFC66AF009C00DB /* ExtensionHandler.swift */; };
@@ -56,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DD4F0B1F1DFC5BAC009C00DB /* PlayAlways.appex in Embed App Extensions */,
+				DD4F0B1F1DFC5BAC009C00DB /* PlayAlwaysExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 		1F08783A2074E51E00E3993C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F08783C2074F09500E3993C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		989320591DFB6085003A20A3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
-		DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlways.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlayAlwaysExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F0B131DFC5BAC009C00DB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F0B171DFC5BAC009C00DB /* PlayAwaysExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayAwaysExtension.entitlements; sourceTree = "<group>"; };
 		DD4F0B181DFC5BAC009C00DB /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			children = (
 				DD7A4F141DF9FBB80015054B /* PlayAlways.app */,
 				DD7A4F371DF9FF7C0015054B /* PACore.framework */,
-				DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */,
+				DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			);
 			name = PlayAlwaysExtension;
 			productName = PlayAwaysExtension;
-			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlways.appex */;
+			productReference = DD4F0B111DFC5BAC009C00DB /* PlayAlwaysExtension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 		DD7A4F131DF9FBB80015054B /* PlayAlways */ = {
@@ -336,12 +336,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Guilherme Rambo";
 				TargetAttributes = {
 					DD4F0B101DFC5BAC009C00DB = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2379EAXEPK;
+						DevelopmentTeam = L5UZAT7KA9;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -351,20 +352,21 @@
 					};
 					DD7A4F131DF9FBB80015054B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2379EAXEPK;
+						DevelopmentTeam = L5UZAT7KA9;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					DD7A4F361DF9FF7C0015054B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8C7439RJLG;
-						LastSwiftMigration = 0810;
+						DevelopmentTeam = L5UZAT7KA9;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = DD7A4F0F1DF9FBB80015054B /* Build configuration list for PBXProject "PlayAlways" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -480,14 +482,14 @@
 				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2379EAXEPK;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
-				PRODUCT_NAME = PlayAlways;
+				PRODUCT_NAME = PlayAlwaysExtension;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -497,14 +499,14 @@
 				CODE_SIGN_ENTITLEMENTS = PlayAwaysExtension/PlayAwaysExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2379EAXEPK;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PlayAwaysExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways.PlayAlwaysExtension;
-				PRODUCT_NAME = PlayAlways;
+				PRODUCT_NAME = PlayAlwaysExtension;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -518,15 +520,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -569,15 +579,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -609,13 +627,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2379EAXEPK;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -626,13 +644,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2379EAXEPK;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PlayAways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PlayAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -645,7 +663,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -658,7 +676,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -673,7 +691,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8C7439RJLG;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -685,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.PACore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
