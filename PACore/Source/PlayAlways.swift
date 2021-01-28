@@ -32,7 +32,7 @@ public struct PlayAlways {
     var dateString: String {
         let date = Date()
         let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "YMMdd_HHmmss"
+        dateFormat.dateFormat = "yMMdd_HHmmss"
         return dateFormat.string(from: date)
     }
     
